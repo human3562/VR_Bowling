@@ -35,8 +35,8 @@ public class pinManipulator : MonoBehaviour
         _sequence.Append(pinGuard.DOMoveX(11.1f, 2f));
         _sequence.Append(pinGuard.DOMoveX(9.2f, 0.5f));
 
-        _sequence.Append(pinSpawnPos.transform.DOMoveY(0f, 0.5f));
-        _sequence.Join(pinSpawner.transform.DOMoveY(0.4f, 0.5f));
+        _sequence.Append(pinSpawnPos.transform.DOMoveY(-0.5f, 0.5f));
+        _sequence.Join(pinSpawner.transform.DOMoveY(0.5f, 0.5f));
 
         _sequence.AppendCallback(pinSpawnPos.GetComponent<makeKinematic>().removePinsKinematic);
         _sequence.Append(pinSpawner.transform.DOMoveY(1f, 0.5f));
@@ -70,8 +70,8 @@ public class pinManipulator : MonoBehaviour
         //_sequence.Join(pinSpawner.transform.DOMoveY(1f, 0.5f));
 
 
-        _sequence.Append(pinSpawnPos.transform.DOMoveY(0f, 0.8f));
-        _sequence.Join(pinSpawner.transform.DOMoveY(0.3f, 0.8f));
+        _sequence.Append(pinSpawnPos.transform.DOMoveY(-0.5f, 1.0f));
+        _sequence.Join(pinSpawner.transform.DOMoveY(0.5f, 1.0f));
 
         _sequence.AppendCallback(pinSpawnPos.GetComponent<makeKinematic>().removePinsKinematic);
         _sequence.Append(pinSpawner.transform.DOMoveY(1f, 0.5f));

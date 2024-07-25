@@ -5,7 +5,6 @@ namespace Valve.VR.InteractionSystem.Sample
 {
     public class Grenade : MonoBehaviour
     {
-	public GameObject explodeEffect;
         public GameObject explodePartPrefab;
         public int explodeCount = 10;
 
@@ -25,8 +24,6 @@ namespace Valve.VR.InteractionSystem.Sample
 
             if (collision.impulse.magnitude > minMagnitudeToExplode)
             {
-		GameObject effect = Instantiate(explodeEffect, transform);
-		effect.transform.parent = null;
                 for (int explodeIndex = 0; explodeIndex < explodeCount; explodeIndex++)
                 {
                     GameObject explodePart = (GameObject)GameObject.Instantiate(explodePartPrefab, this.transform.position, this.transform.rotation);
